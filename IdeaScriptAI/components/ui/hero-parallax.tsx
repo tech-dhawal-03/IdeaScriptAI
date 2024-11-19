@@ -8,14 +8,13 @@ import {
   MotionValue,
 } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+
 
 export const HeroParallax = ({
   products,
 }: {
   products: {
     title: string;
-    link: string;
     thumbnail: string;
   }[];
 }) => {
@@ -105,7 +104,7 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        The Ultimate <br /> development studio
+        The Advanced Scripting <br /> development studio
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
       IdeaScriptAI is your ultimate AI-powered tech content generator, designed to transform your ideas into engaging, high-quality content effortlessly. Whether you’re a marketer, blogger, or business owner, our platform streamlines your writing process, saving you time and enhancing creativity. With advanced algorithms and intuitive features, IdeaScriptAI helps you generate compelling articles, blog posts, and marketing copy tailored to your audience. Embrace the power of AI and elevate your content strategy today!
@@ -121,7 +120,6 @@ export const ProductCard = ({
 }: {
   product: {
     title: string;
-    link: string;
     thumbnail: string;
   };
   translate: MotionValue<number>;
@@ -137,18 +135,16 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
-      <Link
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
-      >
+      {/* <Link */}
+      
         <Image
           src={product.thumbnail}
           height="600"
           width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          className="object-cover object-left-top absolute h-full w-full inset-0 block group-hover/product:shadow-2xl"
           alt={product.title}
         />
-      </Link>
+      {/* </Link> */}
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
