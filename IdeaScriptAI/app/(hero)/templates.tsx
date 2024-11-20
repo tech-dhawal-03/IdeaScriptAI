@@ -40,17 +40,17 @@ const genIdeas  = [
     ]
 },
 {
-    name: 'Blog Topic Ideas',
-    desc: 'An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.',
+    name: 'Ideas Generation',
+    desc: 'An AI tool that serves as your personal friend, generating catchy and viral-worthy ideas in your chosen language.',
     category: 'Blog',
     icon: 'https://cdn-icons-png.flaticon.com/128/11497/11497847.png',
-    slug: 'blog-topic-idea',
-    aiPrompt: 'Generate top 5 Blog Topic Ideas in bullet point only, (no Description) based on niche in rich text editor format',
+    slug: 'idea-generation',
+    aiPrompt: 'Generate top 5 unique, eyecatching-Ideas in bullet point only, based on event provided',
     form: [
         {
-            label: 'Enter your Niche',
+            label: 'Enter about your event',
             field: 'input',
-            name: 'niche',
+            name: 'event',
             required:true
         },
     ]
