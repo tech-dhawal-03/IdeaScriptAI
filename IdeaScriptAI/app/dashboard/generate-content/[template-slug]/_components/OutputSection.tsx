@@ -15,6 +15,15 @@ interface PROPS
 function OutputSection({aiOutput} : PROPS) {
   const editorRef:any = useRef();
 
+  const copyToClipboard = async (text : string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert("Copied to clipboard!"); // Optional: Provide user feedback
+    } catch (err) {
+      console.error("Failed to copy text:", err);
+    }
+  }
+
   useEffect(()=>
   {
     const editorInstance = editorRef.current.getInstance();
@@ -27,7 +36,9 @@ function OutputSection({aiOutput} : PROPS) {
       <div className='p-5 flex justify-between'>
         <h2 className='font-bold text-lg'>Output</h2>
     
-        <Button className='flex gap-2'>
+        <Button 
+          className='flex gap-2 hover:scale-105'
+          onClick={()=>{copyToClipboard(aiOutput)}}>
           <Copy className='w-4 h-4' />
           Copy
         </Button>

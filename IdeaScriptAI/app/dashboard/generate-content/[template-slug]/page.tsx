@@ -37,7 +37,6 @@ const [finalOutput,setFinalOutput] = useState<string>('');
 
 
 
-
 const genAIContent = async (inputData : any)=>{
   
   // setEmail(user?.emailAddresses[0].emailAddress)

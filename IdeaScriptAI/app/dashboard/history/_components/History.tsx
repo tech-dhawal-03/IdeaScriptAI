@@ -4,6 +4,8 @@ import genIdeas from "@/app/(hero)/templates";
 import { Copy} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 
 interface PROPS{
     history : any
@@ -26,9 +28,15 @@ function History({history}:PROPS) {
 
   return (
     
-    <div className='w-full p-10 m-4 border-black  shadow-xl h-screen rounded-md '>
-    <h1 className='text-2xl font-bold'>History</h1>
-    <p className='text-slate-400 py-5'>Know your previous content generations</p>
+    <div className='w-full p-10 m-4  border-black  shadow-xl h-screen rounded-md '>
+       <Link href="/dashboard">
+        <Button className='hover:scale-105'>
+          <ArrowLeft /> Back
+        </Button>
+      </Link>
+    
+      <h1 className='text-2xl font-bold mt-2'>History</h1>
+      <p className='text-slate-400 py-5'>Know your previous content generations</p>
     <div className="grid grid-cols-10 border border-gray-300">
 
 {/* Header */}
