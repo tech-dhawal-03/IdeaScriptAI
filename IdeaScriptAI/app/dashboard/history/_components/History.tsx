@@ -9,10 +9,18 @@ import { ArrowLeft } from 'lucide-react';
 
 interface PROPS{
     history : any
+    
 }
 
 
+
+
+
 function History({history}:PROPS) {
+
+
+
+ 
 
   
     
@@ -51,9 +59,13 @@ function History({history}:PROPS) {
 
 {/* Row 1 */}
 {
+
 history.map((item:any,index:number)=>{
   const temp = genIdeas.find(data_item => data_item.slug === item.templateSlug)
   console.log("temp is ",temp);
+  const niche : any =  Object.values(item.formData)[0]
+  
+  // console.log("history is",niche);
     
 
   return(
@@ -81,6 +93,7 @@ history.map((item:any,index:number)=>{
       />}
 
       <h2 className='flex text-bold ml-6 p-2'>{temp?.name}</h2>
+      <h3 className='flex justify-center font-bold'>{niche}</h3>
       </div>
       </div>
 
