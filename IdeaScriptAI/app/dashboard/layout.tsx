@@ -37,35 +37,41 @@ function layout({
 
 
 
-       
+       < body>
 
-    <div className='bg-slate-100'>
+
+        <div className='bg-slate-100'>
             <div className='hidden w-1/6  fixed md:block'>
                 <LeftSidebar />
             </div> 
 
-
-            <div className='flex flex-col md:ml-36 lg:ml-52 xl:ml-64 absolute w-screen md:w-[80%]'>
-                <div className='flex'>
-                    {/* <Topbar /> */}
-                </div>
+            <div className='flex flex-col md:ml-36 lg:ml-52 xl:ml-64 absolute w-screen md:w-[80%]'>               
 
                 {children}
-
-                
-
+        
             </div>
 
-            <div className='block fixed  bottom-0 md:hidden'>
-                <Bottombar/>
-                
-            </div>
 
-            
+          
+
+           
+
+
 
                
 
         </div>
+
+         <div className='flex bottom-0 fixed md:hidden'>
+
+            <Bottombar />
+
+        </div>
+
+        </body>
+
+
+
 
 
 

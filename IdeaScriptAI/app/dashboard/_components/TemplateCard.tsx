@@ -7,6 +7,7 @@ import Link from 'next/link'
 
 
 
+
 function TemplateCard(item:TEMPLATE) {
   const colors = [
     "border-pink-600",
@@ -45,10 +46,12 @@ const [shade, setShade] = useState<string>("");
 
   return (
 
-    <Link href={`/dashboard/generate-content/${item.slug}`}>
-    <div className={`p-5 h-[90%] shadow-md rounded-lg border bg-white flex flex-col cursor-pointer hover:scale-105 transition-all ${shade} hover:border-4 `}>
+    
+    
+      <Link href={`/dashboard/generate-content/${item.slug}`}>
+          <div className={`p-5 h-[90%] shadow-md rounded-lg border bg-white flex flex-col cursor-pointer hover:scale-105 transition-all ${shade} hover:border-4  `}>
         
-        <Image 
+            <Image 
             src={item.icon}
             alt="icon"
             width = {50}
@@ -61,9 +64,17 @@ const [shade, setShade] = useState<string>("");
           <p className='text-gray-500 line-clamp-3 mt-2'>
             {item.desc}
           </p>
+          </div>
+    
+      </Link>
 
-    </div>
-    </Link>
+     
+
+    
+    
+    
+
+    
   )
 }
 

@@ -1,8 +1,16 @@
 "use client"
-import { Home,FileClock,UserRoundPen } from "lucide-react"
+import { SignedIn, SignOutButton } from "@clerk/nextjs";
+import { Home,FileClock,UserRoundPen, LogOut } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation"
+
 export default function Bottombar()
 {
+
+
+    
+
     const menuList = [
         {
             name: 'Home',
@@ -13,32 +21,65 @@ export default function Bottombar()
         {
             name: 'History',
             icon: FileClock,
-            path: 'dashboard/history'
+            path: '/dashboard/history'
         },
 
         {
             name: 'Profile',
             icon: UserRoundPen,
-            path: 'dashboard/user-personal-details'
+            path: '/dashboard/profile'
         },
+
+
+        
+
+        
 
     ]
 
     const path = usePathname();
 
     return(
+        <>
 
-        
-            <div className="flex flex-row gap-10 mx-2 my-2">
+    
+            <div className="flex flex-row gap-16 mx-2 my-2 bg-white w-screen">
                     {menuList.map((item,index) => (
-                        <div className={`gap-10 p-3 w-full hover:bg-primary hover:text-white rounded-lg cursor-pointer 
-                        ${path==item.path && `bg-primary text-white`}`}
-                        key={index}>
+                       <Link href={item.path} key={index}>
+                            <div className={`p-5   hover:bg-primary hover:text-white rounded-lg cursor-pointer 
+                                ${path==item.path && `bg-primary text-white`}`}
+                        >
                             <item.icon />
+                            
                         </div>
+                        </Link>
 
                     ))}
-                </div>    
+
+                    <div className="flex p-5 hover:bg-primary hover:text-white rounded-lg cursor-pointer">
+                        <SignedIn>
+                            <SignOutButton>
+                                <Link href="/">
+                                     <LogOut />
+                                </Link>
+                            </SignOutButton>
+                        </SignedIn>
+                       
+                    </div>
+
+
+            </div>
+
+        
+
+        
+       
+        
+
+        </>
+
+
+
         
        
     )
