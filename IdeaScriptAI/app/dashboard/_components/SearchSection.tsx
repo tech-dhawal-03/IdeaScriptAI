@@ -9,7 +9,7 @@ function SearchSection({onSearchInput}:any) {
       <h2 className='flex text-white text-3xl font-bold justify-center mt-10'>Browse All Templates...</h2>
       <h1 className='flex text-white text-xl font-semibold justify-center'>What's on your mind ?</h1>
       <div className='flex justify-center' >
-        <div className='flex gap-3 border rounded-lg p-2 w-[30%] bg-white mt-1 '>
+        <div className='flex gap-3 border rounded-lg p-2 w-[50%] md:w-[30%] bg-white mt-1 '>
             <Search className='text-primary' />
             <input
               type="text"
