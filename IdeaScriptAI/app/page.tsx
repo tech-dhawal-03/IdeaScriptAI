@@ -138,7 +138,7 @@ export default function Home()
 
     <div className="flex justify-center mt-20">
       <Button 
-         className="flex justify-center text-xl mx-2 cursor-pointer p-6 mt-2 w-[25%] rounded-2xl hover:scale-110">
+         className="flex justify-center text-xl mx-2 cursor-pointer p-6 mt-2  w-[35%] md:w-[25%] rounded-2xl hover:scale-110">
           <Link href="/sign-in">
           Get Started
           </Link>
