@@ -13,49 +13,49 @@ export default function Home()
 
   const products = [
     {
-      title: "Moonbeam",
+      title: "Dashboard",
       thumbnail:
         "/assets/landing.png",
     },
     {
-      title: "Cursor",
+      title: "Content Generation - History",
       thumbnail:
         "/assets/history.png",
     },
     {
-      title: "Rogue",
+      title: "Content Generation - Template 1",
       thumbnail:
         "/assets/template1.png",
     },
    
     {
-      title: "Editorially",
+      title: "Content Generation - Template 2",
       thumbnail:
         "/assets/template2.png",
     },
     {
-      title: "Editrix AI",
+      title: "User Management",
       thumbnail:
         "/assets/profile1.png",
     },
     {
-      title: "Pixel Perfect",
+      title: "User Controls",
       thumbnail:
         "/assets/profile2.png",
     },
    
     {
-      title: "Algochurn",
+      title: "Sign-In",
       thumbnail:
         "/assets/signin.png",
     },
     {
-      title: "Aceternity UI",
+      title: "Sign-Up",
       thumbnail:
         "/assets/signup.png",
     },
     {
-      title: "Tailwind Master Kit",
+      title: "Ide@$criptAI",
       thumbnail:
         "/assets/logo-png.png",
     },
